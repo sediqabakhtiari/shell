@@ -43,11 +43,14 @@ mkdir -p data/processed/server_logs data/processed/user_logs data/processed/even
 cp data/raw/*server*.log data/processed/server_logs/
 
 # 6. Repeat the above step for user logs and event logs
-
-
+cp data/raw/*user*.log data/processed/user_logs/
+cp data/raw/*event*.log data/processed/event_logs/
 # 7. For user privacy, remove all files containing IP addresses (files with "ipaddr" in the filename) from ./data/raw and ./data/processed/user_logs
+rm -f data/raw/*ipaddr*
+rm -f data/processed/user_logs/*ipaddr*
 
 # 8. Create a file named ./data/inventory.txt that lists all the files in the subfolders of ./data/processed
+find data/processed -type f > data/inventory.txt
 
 ###########################################
 
