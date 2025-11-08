@@ -29,10 +29,6 @@ unzip -q rawdata.zip
 
 # 1. Create a directory named data
 mkdir data
-<<<<<<< HEAD
-
-=======
->>>>>>> 185e864 (answered Q 2 and Q 3)
 
 # 2. Move the ./rawdata directory to ./data/raw
 mv rawdata data/raw
